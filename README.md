@@ -13,6 +13,11 @@
 ### Primary Use Case:
 Adding a clean, white institutional logo or crest to school events, graduation ceremonies, sports activities, and academic photography with an optional subtle drop shadow and white connecting accent lines.
 
+### Brand Assets:
+- `public/markaan-logo.png`: Transparent Markaan geometric emblem in brand cyan/blue.
+- `public/markaan-logo-white.png`: Transparent pure white emblem for photography watermark overlays.
+- `public/markaan-watermark-full.png`: Transparent full brand watermark badge with typography by Ahsan Raza.
+
 ---
 
 ## 🚀 Quick Start on Windows

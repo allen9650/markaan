@@ -1,3 +1,5 @@
+import fs from "fs";
+import path from "path";
 import sharp from "sharp";
 import { WatermarkSettings } from "./types";
 import { calculateWatermarkPosition } from "./positioning";
@@ -32,9 +34,21 @@ export async function processWatermark(
   const imageHeight = metadata.height || 1080;
   const detectedFormat = (metadata.format || "jpeg").toLowerCase();
 
-  const rawWmBuffer = watermarkBuffer && watermarkBuffer.length > 0
-    ? watermarkBuffer
-    : Buffer.from(SAMPLE_INSTITUTIONAL_WATERMARK_SVG);
+  let rawWmBuffer: Buffer;
+  if (watermarkBuffer && watermarkBuffer.length > 0) {
+    rawWmBuffer = watermarkBuffer;
+  } else {
+    try {
+      const defaultPngPath = path.join(process.cwd(), "public", "markaan-watermark-full.png");
+      if (fs.existsSync(defaultPngPath)) {
+        rawWmBuffer = fs.readFileSync(defaultPngPath);
+      } else {
+        rawWmBuffer = Buffer.from(SAMPLE_INSTITUTIONAL_WATERMARK_SVG);
+      }
+    } catch {
+      rawWmBuffer = Buffer.from(SAMPLE_INSTITUTIONAL_WATERMARK_SVG);
+    }
+  }
 
   const wmMeta = await sharp(rawWmBuffer).metadata();
   const origWmWidth = wmMeta.width || 1000;

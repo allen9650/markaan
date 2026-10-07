@@ -34,8 +34,8 @@ export function Navbar({ totalCount, completedCount }: NavbarProps) {
       <div className="container max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
         {/* Brand */}
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-500 flex items-center justify-center text-white shadow-md shadow-blue-500/20">
-            <Sparkles className="w-5 h-5" />
+          <div className="w-10 h-10 rounded-xl bg-slate-900 border border-border flex items-center justify-center p-1.5 shadow-md shadow-blue-500/20 overflow-hidden">
+            <img src="/markaan-logo.png" alt="Markaan" className="w-full h-full object-contain" />
           </div>
           <div>
             <div className="flex items-center gap-2">

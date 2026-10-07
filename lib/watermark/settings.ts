@@ -33,9 +33,9 @@ export const DEFAULT_WATERMARK_SETTINGS: WatermarkSettings = {
 
 export const BUILT_IN_PRESETS: Preset[] = [
   {
-    id: "preset-ptm-bottom-center",
-    name: "PTM Bottom Center",
-    description: "Institutional emblem + subtle shadow + white accent lines on both sides",
+    id: "preset-markaan-bottom-center",
+    name: "Markaan Bottom Center",
+    description: "Markaan emblem by Ahsan Raza + subtle shadow + white accent lines on both sides",
     isBuiltIn: true,
     settings: {
       ...DEFAULT_WATERMARK_SETTINGS,

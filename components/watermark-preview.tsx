@@ -335,19 +335,11 @@ export function WatermarkPreview({
                   className="w-full h-full object-contain pointer-events-none"
                 />
               ) : (
-                <div className="w-full h-full flex items-center justify-center gap-3 px-2 py-1 text-white border border-white/20 rounded-md bg-white/5 backdrop-blur-[1px] pointer-events-none">
-                  <div className="w-9 h-9 rounded-full border-2 border-white/80 flex items-center justify-center font-serif text-sm font-bold">
-                    🏛️
-                  </div>
-                  <div className="text-left font-serif tracking-wider">
-                    <p className="text-xs font-bold leading-tight uppercase">
-                      ST. AUGUSTINE ACADEMY
-                    </p>
-                    <p className="text-[9px] tracking-widest text-white/90">
-                      EXCELLENCE • TRADITION
-                    </p>
-                  </div>
-                </div>
+                <img
+                  src="/markaan-watermark-full.png"
+                  alt="Markaan by Ahsan Raza"
+                  className="w-full h-full object-contain pointer-events-none"
+                />
               )}
 
               <div className="absolute -top-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-black/80 text-white text-[10px] px-2 py-0.5 rounded-full pointer-events-none flex items-center gap-1 whitespace-nowrap">

@@ -21,7 +21,7 @@ export function PresetManager({
   onApplyPreset,
 }: PresetManagerProps) {
   const [presets, setPresets] = useState<Preset[]>(BUILT_IN_PRESETS);
-  const [selectedPresetId, setSelectedPresetId] = useState<string>("preset-ptm-bottom-center");
+  const [selectedPresetId, setSelectedPresetId] = useState<string>("preset-markaan-bottom-center");
   const [isSaving, setIsSaving] = useState(false);
   const [newPresetName, setNewPresetName] = useState("");
   const [toastMessage, setToastMessage] = useState<string | null>(null);
@@ -62,7 +62,7 @@ export function PresetManager({
     deleteUserPreset(active.id);
     const updated = loadSavedPresets();
     setPresets(updated);
-    setSelectedPresetId(updated[0]?.id || "preset-ptm-bottom-center");
+    setSelectedPresetId(updated[0]?.id || "preset-markaan-bottom-center");
     onApplyPreset(updated[0]?.settings || DEFAULT_WATERMARK_SETTINGS);
     triggerToast(`Deleted "${active.name}"`);
   };
@@ -143,10 +143,10 @@ export function PresetManager({
           type="button"
           onClick={() => {
             onApplyPreset(DEFAULT_WATERMARK_SETTINGS);
-            setSelectedPresetId("preset-ptm-bottom-center");
+            setSelectedPresetId("preset-markaan-bottom-center");
             triggerToast("Reset to defaults");
           }}
-          title="Reset to PTM Bottom Center defaults"
+          title="Reset to Markaan Bottom Center defaults"
           className="p-2 rounded-lg border border-border bg-card hover:bg-accent text-muted-foreground hover:text-foreground text-xs transition-colors"
         >
           <RotateCcw className="w-3.5 h-3.5" />

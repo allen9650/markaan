@@ -181,7 +181,7 @@ export function ImageUploader({
               </span>
             ) : (
               <span className="text-[11px] font-medium text-primary/80 bg-primary/10 px-2 py-0.5 rounded-full">
-                Built-in Crest
+                Markaan Default
               </span>
             )}
           </div>
@@ -207,10 +207,11 @@ export function ImageUploader({
                 className="max-h-full max-w-full object-contain relative z-10 transition-transform group-hover:scale-105"
               />
             ) : (
-              <div className="text-center z-10">
-                <p className="text-xs font-medium text-white/90">Default Institutional Crest</p>
-                <p className="text-[10px] text-white/60">Click to upload custom PNG</p>
-              </div>
+              <img
+                src="/markaan-watermark-full.png"
+                alt="Markaan by Ahsan Raza"
+                className="max-h-full max-w-full object-contain relative z-10 transition-transform group-hover:scale-105"
+              />
             )}
 
             <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-20">

@@ -4,6 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Markaan by Ahsan Raza - Professional Local Image Watermarking",
   description: "Markaan by Ahsan Raza. Secure, local high-speed bulk watermark generator for Windows users. 100% private, no cloud uploads.",
+  icons: {
+    icon: "/markaan-logo.png",
+  },
 };
 
 export default function RootLayout({
