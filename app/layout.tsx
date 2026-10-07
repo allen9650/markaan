@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Markaan by Ahsan Raza - Professional Local Image Watermarking",
+  title: "Markaan",
   description: "Markaan by Ahsan Raza. Secure, local high-speed bulk watermark generator for Windows users. 100% private, no cloud uploads.",
   icons: {
     icon: "/markaan-logo.png",
