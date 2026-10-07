@@ -1,176 +1,169 @@
 # Markaan 🎨
-### By Ahsan Raza
+### Bulk Photo Watermarking Made Instant & Painless
+**By Ahsan Raza** • [GitHub Repository](https://github.com/allen9650/markaan)
 
-> **Professional local bulk image watermarking designed for Windows users.**  
-> 100% private, 100% offline — zero cloud uploads, zero external APIs, zero databases.
-
----
-
-## 🌟 Overview
-
-**Markaan** (by Ahsan Raza) is a local web application built with **Next.js (App Router)**, **React**, **TypeScript**, **Tailwind CSS**, and **Sharp**. It is engineered to process hundreds of high-resolution photographs locally on the user's computer with institutional-grade visual quality, memory safety, and high speed.
-
-### Primary Use Case:
-Adding a clean, white institutional logo or crest to school events, graduation ceremonies, sports activities, and academic photography with an optional subtle drop shadow and white connecting accent lines.
-
-### Brand Assets:
-- `public/markaan-logo.png`: Transparent Markaan geometric emblem in brand cyan/blue.
-- `public/markaan-logo-white.png`: Transparent pure white emblem for photography watermark overlays.
-- `public/markaan-watermark-full.png`: Transparent full brand watermark badge with typography by Ahsan Raza.
+> **Stop watermarking photos one by one!**  
+> Markaan is a free, 100% private desktop web application designed to watermark **hundreds of photos in seconds** right on your Windows PC.  
+> **No cloud uploads. No monthly subscriptions. No image limits. No loss in quality.**
 
 ---
 
-## 🚀 Quick Start on Windows
+## 😫 The Problem Markaan Solves
 
-### Prerequisites
-- **Node.js** version 18.17+ or 20+ (tested and verified on Node.js v24)
-- **npm** (comes bundled with Node.js)
+If you are a photographer, school event coordinator, teacher, social media manager, or business owner, you know the frustration:
 
-### 1. Installation
-Open PowerShell or Command Prompt in the project folder and install dependencies:
+* ❌ **Adding watermarks 1-by-1 takes hours:** Opening dozens or hundreds of photos individually in Photoshop, Canva, or Lightroom to place a logo is agonizingly slow.
+* ❌ **Online tools compromise your privacy:** Most free watermark websites force you to upload private family, student, or event photos to third-party cloud servers.
+* ❌ **Cloud tools impose arbitrary limits:** Many websites limit you to 5 or 10 images at a time, throttle your speed, compress your images to low resolution, or demand paid subscriptions.
+
+### ✨ The Markaan Solution:
+With **Markaan**, you simply drag and drop **10, 50, 100, or 500+ photos** at once, adjust your logo position with live instant preview, click **"Process All Images"**, and download a ready-to-share **ZIP file** in seconds.
+
+All processing is handled directly by your computer's CPU using the ultra-fast **Sharp** graphics engine. Your photos **never leave your computer**.
+
+---
+
+## ⚡ Non-Technical Quick Start (No Coding Required!)
+
+You do **not** need to be a programmer or know any code to use Markaan. Just follow these 3 simple steps:
+
+### Step 1: Install Node.js (Only Needed Once)
+Markaan runs as a private, secure mini-server on your own computer so it can process high-resolution images at maximum speed without the internet. To do this, it needs **Node.js** (a free, safe software runtime from the open-source community).
+
+1. Go to the official Node.js website:  
+   👉 **[https://nodejs.org/](https://nodejs.org/)**
+2. Click the big green button that says **LTS (Recommended For Most Users)** to download the installer.
+3. Open the downloaded file and click **Next** through the setup prompts to finish installing.
+
+---
+
+### Step 2: Download Markaan
+1. On this GitHub page, click the green **Code** button near the top right and choose **Download ZIP**.
+2. Right-click the downloaded `.zip` file, select **Extract All...**, and choose a folder on your computer (for example, on your Desktop or in your Documents folder).
+
+*(Or if you use Git, run `git clone https://github.com/allen9650/markaan.git`)*
+
+---
+
+### Step 3: Launch with One Click!
+1. Open the extracted `markaan` folder.
+2. Find the file named **`Start-Markaan.bat`** and **double-click it**.
+3. That's it! 
+   * *The script will automatically check Node.js, install necessary components on the first run, and automatically open your web browser to:*
+   ```
+   http://localhost:3000
+   ```
+
+*(Keep the black terminal window open while using Markaan. When you are done, simply close the window.)*
+
+---
+
+## 🖥️ How to Use Markaan (Step-by-Step)
+
+```
+┌─────────────────┐     ┌──────────────────┐     ┌─────────────────┐
+│ 1. Choose Logo  │ ──► │ 2. Drop Photos   │ ──► │ 3. Adjust Style │
+└─────────────────┘     └──────────────────┘     └─────────────────┘
+                                                           │
+                                                           ▼
+┌─────────────────┐     ┌──────────────────┐     ┌─────────────────┐
+│ 5. Download ZIP │ ◄── │ 4. Process Batch │ ◄───┤  Live Preview   │
+└─────────────────┘     └──────────────────┘     └─────────────────┘
+```
+
+1. **Choose Your Watermark:**
+   - Click **"Upload Watermark"** to select your school emblem, company logo, or signature (transparent PNG format recommended).
+   - Or keep the pre-loaded white Markaan emblem.
+2. **Add Your Photos:**
+   - Drag and drop any number of photos (**JPG, PNG, WebP**) into the large drop box.
+   - Or click **"Select Folder"** to import an entire camera folder or event album in one go.
+3. **Customize the Watermark in Real-Time:**
+   - **Position:** Choose from 9 quick anchor points (*Bottom Center*, *Bottom Right*, *Center*, etc.) or click and drag the logo anywhere on the interactive preview!
+   - **Size:** Adjust the slider from 5% to 60% of the photo's width. Markaan automatically keeps the logo's original proportions without stretching.
+   - **Opacity:** Adjust transparency from faint subtle markings to full bold white (10% to 100%).
+   - **Soft Drop Shadow:** Enable a soft shadow so white watermarks remain crisp and legible against bright skies, white shirts, or snow.
+   - **Institutional Accent Line:** Add an elegant connecting horizontal white line on either or both sides of the emblem — standard for prestigious school and event photography.
+4. **Click "Process All Images":**
+   - Markaan processes your batch with multi-core efficiency. A progress bar shows you exactly how many photos are completed in real time.
+5. **Download Your Watermarked Photos:**
+   - Click **"Download All (ZIP)"** to save all processed photos in one package.
+   - **Your original photos are 100% safe!** Markaan never overwrites your original files; it outputs new files with `_watermarked` added to the filename (e.g. `graduation01_watermarked.jpg`).
+
+---
+
+## ❓ Frequently Asked Questions (FAQ)
+
+### Are my photos uploaded to the internet or cloud?
+**Never.** Markaan is 100% offline. Every pixel of your photos is processed strictly inside your computer's RAM and CPU. You can disconnect your Wi-Fi/Ethernet cable and Markaan will continue working without interruption.
+
+### Will it reduce the resolution or quality of my photos?
+**No.** Markaan preserves the full original resolution of your photographs. It automatically reads orientation data (EXIF) so vertical and horizontal smartphone or DSLR photos stay right-side up. You can also customize output quality (default is 90% high-quality JPEG, or lossless PNG).
+
+### What if I have 200, 500, or 1,000 photos?
+Markaan is engineered with smart memory-safe batching (processing 2-3 images concurrently). It will not overload your computer's RAM or crash your browser, even on large photo shoots.
+
+### Is Markaan free?
+**Yes, 100% free and open-source.** No ads, no monthly plans, no hidden watermarks from us placed on your pictures.
+
+---
+
+## 🛠️ For Developers & Technical Users
+
+Markaan is built with a modern Next.js App Router full-stack architecture:
+
+- **Framework:** Next.js 14+ (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS & Lucide Icons
+- **Image Engine:** [Sharp](https://sharp.pixelplumbing.com/) (high-performance C++ libvips wrapper)
+- **Archive Tool:** JSZip
+- **File Ingestion:** React Dropzone
+
+### Manual Developer Commands
+
 ```powershell
+# Install dependencies
 npm install
-```
 
-### 2. Run in Development Mode
-```powershell
+# Start development server
 npm run dev
-```
-Open your browser and navigate to:
-```
-http://localhost:3000
-```
 
-### 3. Production Build & Start (Recommended for maximum speed)
-```powershell
+# Build for maximum production performance
 npm run build
 npm start
 ```
 
----
-
-## 📁 Project Architecture
+### Architecture Overview
 
 ```
 watermark-generator-local/
 ├── app/
 │   ├── api/
 │   │   └── watermark/
-│   │       ├── preview/route.ts    # Fast downsampled server-side Sharp preview
-│   │       └── process/route.ts    # Full-resolution Sharp watermarking engine
-│   ├── globals.css                 # Dark/light theme design tokens and styles
-│   ├── layout.tsx                  # Root HTML layout and metadata
-│   └── page.tsx                    # Main dashboard state & concurrent worker queue
+│   │       ├── preview/route.ts    # Fast downsampled server-side preview generator
+│   │       └── process/route.ts    # Multi-step high-res Sharp compositing engine
+│   ├── layout.tsx                  # Root metadata & page shell
+│   └── page.tsx                    # Main state management & client-side worker queue
 ├── components/
-│   ├── navbar.tsx                  # Top brand bar, privacy badge & dark/light toggle
-│   ├── image-uploader.tsx          # Drag & drop photo zone, folder picker & watermark uploader
-│   ├── watermark-settings.tsx      # Position, size, opacity, shadow, line, and format controls
-│   ├── watermark-preview.tsx       # Live interactive canvas with draggable positioning
-│   ├── image-queue.tsx             # Batch queue list with live statuses, filters & retry
-│   ├── processing-progress.tsx     # Progress modal with ZIP download & folder export
-│   └── preset-manager.tsx          # Presets dropdown & localStorage persistence
+│   ├── navbar.tsx                  # Header bar with privacy indicator & theme toggle
+│   ├── image-uploader.tsx          # Drag & drop photo zone & watermark uploader
+│   ├── watermark-settings.tsx      # Position, size, opacity, shadow, and line controls
+│   ├── watermark-preview.tsx       # Real-time interactive preview canvas
+│   ├── image-queue.tsx             # Batch list with thumbnails & status badges
+│   ├── processing-progress.tsx     # Real-time batch progress & ZIP exporter
+│   └── preset-manager.tsx          # Watermark style preset switcher
 ├── lib/
-│   ├── watermark/
-│   │   ├── types.ts                # TypeScript interfaces for all data structures
-│   │   ├── settings.ts             # Default configurations & built-in presets
-│   │   ├── sample-crest.ts         # High-resolution institutional emblem SVG
-│   │   ├── positioning.ts          # 9-anchor + custom normalized coordinates math
-│   │   ├── shadow.ts               # Alpha-silhouette drop shadow generator via Sharp
-│   │   ├── line.ts                 # Horizontal accent line overlay generator
-│   │   └── processor.ts            # Sharp 12-step image compositing pipeline
-│   └── utils.ts                    # Tailwind CSS helpers & file formatting utilities
-├── next.config.js                  # Next.js config with Sharp external package support
-├── tailwind.config.js              # Tailwind theme configuration
-├── tsconfig.json                   # TypeScript configuration
-└── package.json                    # Project dependencies and npm scripts
+│   └── watermark/
+│       ├── processor.ts            # 12-step Sharp rendering & compositing pipeline
+│       ├── shadow.ts               # Alpha-silhouette Gaussian drop shadow generator
+│       ├── line.ts                 # Accent line geometry generator
+│       └── positioning.ts          # Resolution-independent coordinate calculations
+├── Start-Markaan.bat               # 1-click launcher for Windows users
+└── package.json
 ```
 
 ---
 
-## ⚙️ How Watermark Processing Works
+## 📜 License & Credits
 
-Every image uploaded to the application is processed locally through a memory-safe **Sharp** pipeline:
-
-1. **EXIF Normalization**:  
-   `sharp(imageBuffer).rotate()` auto-orients photos according to EXIF metadata, ensuring iPhone, Android, portrait, landscape, and square photos are never inverted or rotated sideways.
-2. **Proportional Dynamic Scaling**:  
-   The watermark width is computed dynamically as a percentage of each photograph's resolution (e.g., 35% of a 4000px image = 1400px; 35% of a 1920px image = 672px). The logo's native aspect ratio is strictly preserved.
-3. **True Drop Shadow Generation**:  
-   Rather than placing a crude black rectangle, `lib/watermark/shadow.ts` extracts the watermark's exact alpha silhouette, extends canvas padding to prevent edge clipping, scales the alpha channel with a linear matrix, and applies a Gaussian blur. This produces a soft, elegant drop shadow that keeps white logos crisp and readable even against bright skies and light clothing.
-4. **Institutional Accent Line**:  
-   `lib/watermark/line.ts` generates clean horizontal rules (Left, Right, or Both sides) aligned with the watermark's vertical center. Line thickness scales proportionally with the target image resolution.
-5. **Multi-layer Composite**:  
-   Sharp composites the shadow layer, accent lines, and watermark in a single execution pass.
-6. **Encoding & Quality**:  
-   Outputs to JPEG (quality 80–100, default 90), WebP (default 90), or original format with zero unnecessary compression loss.
-7. **Memory Release**:  
-   Buffers are streamed directly back to the client, preventing Node.js server RAM accumulation when processing batches of 500+ photographs.
-
----
-
-## 🛡️ Memory & Concurrency Management
-
-- **No Full-Resolution State**: The browser retains only lightweight thumbnails and `File` object handles—never full uncompressed image bitmaps in React state.
-- **Worker Concurrency Limit**: The client processes images with a controlled pool of 2 to 3 concurrent requests (adjustable in the UI from 1x to 4x). This prevents memory spikes when handling 4K/6K/8K images.
-- **Fail-Safe Batching**: If an individual file fails due to corruption or an invalid format, the queue logs the error, marks the item `Failed`, and continues processing the rest of the batch. You can retry failed files at any time with the "Retry Failed" button.
-
----
-
-## 💾 Exporting Results
-
-Once processing finishes, you have two export choices:
-1. **Download All as ZIP** (`watermarked_images.zip`): Universal one-click export generated locally in the browser via JSZip.
-2. **Choose Output Folder**: In modern Chromium browsers (Google Chrome, Microsoft Edge), you can select an existing folder on your Windows drive (e.g. `D:\Watermarked_Photos`) and have files written directly to disk.
-
----
-
-## 🎛️ Changing Default Watermark Settings
-
-All defaults are centralized in [`lib/watermark/settings.ts`](./lib/watermark/settings.ts):
-
-```typescript
-export const DEFAULT_WATERMARK_SETTINGS: WatermarkSettings = {
-  position: "bottom-center",
-  sizePercent: 35,          // 35% of photo width
-  opacity: 90,              // 90% opacity
-  marginHorizontal: 30,     // 30px scaled
-  marginVertical: 35,       // 35px scaled
-  shadow: {
-    enabled: true,
-    color: "#000000",
-    opacity: 30,            // 30% subtle shadow
-    blur: 3,                // 3px blur
-    offsetX: 1,
-    offsetY: 2,
-  },
-  line: {
-    enabled: true,
-    color: "#ffffff",
-    opacity: 90,
-    thickness: 2,           // 2px scaled
-    lengthPercent: 30,      // 30% of watermark width
-    position: "both",       // Both sides
-  },
-  outputFormat: "original", // Preserve input format
-  jpegQuality: 90,
-  webpQuality: 90,
-  preservePngQuality: true,
-  filenameSuffix: "_watermarked",
-};
-```
-
-You can customize these defaults, or simply create and save your own presets directly inside the web UI using the **Watermark Preset** panel (stored in your browser's `localStorage`).
-
----
-
-## 📦 Running & Packaging on Windows
-
-To run the application locally on Windows without keeping a command prompt open:
-1. Double-click `Start-Markaan.bat` in the project root:
-   ```cmd
-   @echo off
-   cd /d "%~dp0"
-   start http://localhost:3000
-   npm start
-   ```
-2. The server will launch and open your default browser automatically at `http://localhost:3000`.
+Created with ❤️ by **Ahsan Raza**.  
+Designed to make bulk watermarking fast, private, and effortless for everyone.
